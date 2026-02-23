@@ -1,7 +1,8 @@
 "use client";
 
 import { useState, useEffect } from "react";
-import type { Verse } from "@/lib/types";
+import type { Verse, BibleVersion } from "@/lib/types";
+import { BIBLE_VERSIONS } from "@/lib/types";
 import { BIBLE_BOOKS } from "@/lib/books";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
@@ -33,6 +34,7 @@ const EMPTY: Omit<Verse, "id" | "createdAt"> = {
   chapter: 1,
   verseStart: 1,
   verseEnd: 1,
+  version: "NVI",
   text: "",
 };
 
@@ -53,6 +55,7 @@ export function VerseForm({
               chapter: initialData.chapter,
               verseStart: initialData.verseStart,
               verseEnd: initialData.verseEnd,
+              version: initialData.version,
               text: initialData.text,
             }
           : EMPTY
@@ -101,6 +104,27 @@ export function VerseForm({
                 ))}
               </SelectContent>
             </Select>
+          </div>
+
+          {/* Version */}
+          <div className="space-y-1.5">
+            <Label>Versão</Label>
+            <div className="flex gap-2">
+              {BIBLE_VERSIONS.map((v) => (
+                <button
+                  key={v}
+                  type="button"
+                  onClick={() => setForm((f) => ({ ...f, version: v as BibleVersion }))}
+                  className={`flex-1 rounded-md border px-3 py-1.5 text-sm font-medium transition-colors ${
+                    form.version === v
+                      ? "border-primary bg-primary text-primary-foreground"
+                      : "border-input bg-background hover:bg-muted"
+                  }`}
+                >
+                  {v}
+                </button>
+              ))}
+            </div>
           </div>
 
           {/* Chapter + verse range */}

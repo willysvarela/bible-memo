@@ -81,6 +81,9 @@ export function VerseList({ verses, onAdd, onUpdate, onDelete }: VerseListProps)
                     <span className="font-semibold text-sm">
                       {v.book} {verseRef(v)}
                     </span>
+                    <Badge variant="secondary" className="text-xs px-1.5 py-0">
+                      {v.version ?? "NVI"}
+                    </Badge>
                     {t && (
                       <Badge variant="outline" className="text-xs px-1.5 py-0">
                         {t}

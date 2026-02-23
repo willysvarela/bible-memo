@@ -99,6 +99,9 @@ export function FlashCards({ verses }: FlashCardsProps) {
       >
         {/* Reference always visible */}
         <p className="text-2xl font-bold tracking-tight">{verseRef(current)}</p>
+        <span className="text-xs font-medium text-muted-foreground rounded-full border border-border px-2 py-0.5">
+          {current.version ?? "NVI"}
+        </span>
 
         {/* Divider */}
         <div className="w-12 h-px bg-border" />
