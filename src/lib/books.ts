@@ -1,0 +1,81 @@
+export interface BibleBook {
+  order: number;
+  name: string;
+  abbr: string;
+  testament: "AT" | "NT";
+}
+
+export const BIBLE_BOOKS: BibleBook[] = [
+  // Antigo Testamento
+  { order: 1, name: "Gênesis", abbr: "Gn", testament: "AT" },
+  { order: 2, name: "Êxodo", abbr: "Ex", testament: "AT" },
+  { order: 3, name: "Levítico", abbr: "Lv", testament: "AT" },
+  { order: 4, name: "Números", abbr: "Nm", testament: "AT" },
+  { order: 5, name: "Deuteronômio", abbr: "Dt", testament: "AT" },
+  { order: 6, name: "Josué", abbr: "Js", testament: "AT" },
+  { order: 7, name: "Juízes", abbr: "Jz", testament: "AT" },
+  { order: 8, name: "Rute", abbr: "Rt", testament: "AT" },
+  { order: 9, name: "1 Samuel", abbr: "1Sm", testament: "AT" },
+  { order: 10, name: "2 Samuel", abbr: "2Sm", testament: "AT" },
+  { order: 11, name: "1 Reis", abbr: "1Rs", testament: "AT" },
+  { order: 12, name: "2 Reis", abbr: "2Rs", testament: "AT" },
+  { order: 13, name: "1 Crônicas", abbr: "1Cr", testament: "AT" },
+  { order: 14, name: "2 Crônicas", abbr: "2Cr", testament: "AT" },
+  { order: 15, name: "Esdras", abbr: "Ed", testament: "AT" },
+  { order: 16, name: "Neemias", abbr: "Ne", testament: "AT" },
+  { order: 17, name: "Ester", abbr: "Et", testament: "AT" },
+  { order: 18, name: "Jó", abbr: "Jó", testament: "AT" },
+  { order: 19, name: "Salmos", abbr: "Sl", testament: "AT" },
+  { order: 20, name: "Provérbios", abbr: "Pv", testament: "AT" },
+  { order: 21, name: "Eclesiastes", abbr: "Ec", testament: "AT" },
+  { order: 22, name: "Cantares", abbr: "Ct", testament: "AT" },
+  { order: 23, name: "Isaías", abbr: "Is", testament: "AT" },
+  { order: 24, name: "Jeremias", abbr: "Jr", testament: "AT" },
+  { order: 25, name: "Lamentações", abbr: "Lm", testament: "AT" },
+  { order: 26, name: "Ezequiel", abbr: "Ez", testament: "AT" },
+  { order: 27, name: "Daniel", abbr: "Dn", testament: "AT" },
+  { order: 28, name: "Oseias", abbr: "Os", testament: "AT" },
+  { order: 29, name: "Joel", abbr: "Jl", testament: "AT" },
+  { order: 30, name: "Amós", abbr: "Am", testament: "AT" },
+  { order: 31, name: "Obadias", abbr: "Ob", testament: "AT" },
+  { order: 32, name: "Jonas", abbr: "Jn", testament: "AT" },
+  { order: 33, name: "Miquéias", abbr: "Mq", testament: "AT" },
+  { order: 34, name: "Naum", abbr: "Na", testament: "AT" },
+  { order: 35, name: "Habacuque", abbr: "Hc", testament: "AT" },
+  { order: 36, name: "Sofonias", abbr: "Sf", testament: "AT" },
+  { order: 37, name: "Ageu", abbr: "Ag", testament: "AT" },
+  { order: 38, name: "Zacarias", abbr: "Zc", testament: "AT" },
+  { order: 39, name: "Malaquias", abbr: "Ml", testament: "AT" },
+  // Novo Testamento
+  { order: 40, name: "Mateus", abbr: "Mt", testament: "NT" },
+  { order: 41, name: "Marcos", abbr: "Mc", testament: "NT" },
+  { order: 42, name: "Lucas", abbr: "Lc", testament: "NT" },
+  { order: 43, name: "João", abbr: "Jo", testament: "NT" },
+  { order: 44, name: "Atos", abbr: "At", testament: "NT" },
+  { order: 45, name: "Romanos", abbr: "Rm", testament: "NT" },
+  { order: 46, name: "1 Coríntios", abbr: "1Co", testament: "NT" },
+  { order: 47, name: "2 Coríntios", abbr: "2Co", testament: "NT" },
+  { order: 48, name: "Gálatas", abbr: "Gl", testament: "NT" },
+  { order: 49, name: "Efésios", abbr: "Ef", testament: "NT" },
+  { order: 50, name: "Filipenses", abbr: "Fp", testament: "NT" },
+  { order: 51, name: "Colossenses", abbr: "Cl", testament: "NT" },
+  { order: 52, name: "1 Tessalonicenses", abbr: "1Ts", testament: "NT" },
+  { order: 53, name: "2 Tessalonicenses", abbr: "2Ts", testament: "NT" },
+  { order: 54, name: "1 Timóteo", abbr: "1Tm", testament: "NT" },
+  { order: 55, name: "2 Timóteo", abbr: "2Tm", testament: "NT" },
+  { order: 56, name: "Tito", abbr: "Tt", testament: "NT" },
+  { order: 57, name: "Filêmon", abbr: "Fm", testament: "NT" },
+  { order: 58, name: "Hebreus", abbr: "Hb", testament: "NT" },
+  { order: 59, name: "Tiago", abbr: "Tg", testament: "NT" },
+  { order: 60, name: "1 Pedro", abbr: "1Pe", testament: "NT" },
+  { order: 61, name: "2 Pedro", abbr: "2Pe", testament: "NT" },
+  { order: 62, name: "1 João", abbr: "1Jo", testament: "NT" },
+  { order: 63, name: "2 João", abbr: "2Jo", testament: "NT" },
+  { order: 64, name: "3 João", abbr: "3Jo", testament: "NT" },
+  { order: 65, name: "Judas", abbr: "Jd", testament: "NT" },
+  { order: 66, name: "Apocalipse", abbr: "Ap", testament: "NT" },
+];
+
+export function getBookOrder(name: string): number {
+  return BIBLE_BOOKS.find((b) => b.name === name)?.order ?? 999;
+}
