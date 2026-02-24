@@ -13,6 +13,7 @@ interface VerseListProps {
   onAdd: (data: Omit<Verse, "id" | "createdAt">) => void;
   onUpdate: (id: string, data: Omit<Verse, "id" | "createdAt">) => void;
   onDelete: (id: string) => void;
+  onOpenSettings: () => void;
 }
 
 function verseRef(v: Verse): string {
@@ -25,7 +26,7 @@ function testament(book: string): "AT" | "NT" | null {
   return BIBLE_BOOKS.find((b) => b.name === book)?.testament ?? null;
 }
 
-export function VerseList({ verses, onAdd, onUpdate, onDelete }: VerseListProps) {
+export function VerseList({ verses, onAdd, onUpdate, onDelete, onOpenSettings }: VerseListProps) {
   const [formOpen, setFormOpen] = useState(false);
   const [editing, setEditing] = useState<Verse | null>(null);
 
@@ -125,6 +126,7 @@ export function VerseList({ verses, onAdd, onUpdate, onDelete }: VerseListProps)
         onOpenChange={setFormOpen}
         onSave={handleSave}
         initialData={editing}
+        onOpenSettings={onOpenSettings}
       />
     </div>
   );
